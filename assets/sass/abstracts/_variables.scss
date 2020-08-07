@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+
+//colores
+$text-color: rgb(34, 34, 34) !default;
+$brand-color: rgb(229, 0, 80) !default;
+$light-grey: rgb(237, 237, 237) !default;
+$mid-grey: rgb(153, 153, 153) !default;
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+//max contenido
+$max-contenido: 1200px !default;
+
+// breakpoints para Media Query
+$breakpoints: (
+  'bp-sm': (min-width: 576px),
+  'bp-md': (min-width: 768px),
+  'bp-lg': (min-width: 992px),
+  'bp-xl': (min-width: 1200px),
+);
+
+
+
+

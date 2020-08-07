@@ -1,0 +1,84 @@
+/* .foo {
+  color: peru;
+
+  @include respond-to("bp-sm") {
+    color: blue;
+  }
+  @include respond-to("bp-md") {
+    color: red;
+  }
+  @include respond-to("bp-lg") {
+    color: green;
+  }
+  @include respond-to("bp-xl") {
+    color: purple;
+  }
+} */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@include respond-to("bp-md")  {
+  .container {
+    width: 750px;
+  }
+}
+@include respond-to("bp-lg")  {
+  .container {
+    width: 970px;
+  }
+}
+@include respond-to("bp-xl") {
+  .container {
+    width: 1170px;
+  }
+}
+//* Row
+/*==========================================================================
+*/
+/**En .grid establecemos su display grid, 12 columnas 
+***con grid-gap el espaciado que deseemos darles, de 15px. */
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+}
+
+.col {
+
+  @for $i from 1 through 12 {
+    &.norm-#{$i} {
+      grid-column: span $i;
+    }
+  }
+  @include respond-to("bp-sm") {
+    @for $i from 1 through 12 {
+      &.sm-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+  @include respond-to("bp-md") {
+    @for $i from 1 through 12 {
+      &.md-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+  @include respond-to("bp-lg") {
+    @for $i from 1 through 12 {
+      &.lg-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+  @include respond-to("bp-xl") {
+    @for $i from 1 through 12 {
+      &.-xl-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+}

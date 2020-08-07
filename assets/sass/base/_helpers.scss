@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// Clases de ayuda 
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ Contenedores principales
+ * 1. Hacer el contenedor de ancho completo con un ancho máximo
+ * 2. Centrarlo en la ventana gráfica
+ * 3. Deje algo de espacio en los bordes, especialmente valioso en pantallas pequeñas
+ */
+.container {
+  max-width: $max-contenido; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 20px; /* 3 */
+  padding-right: 20px; /* 3 */
+  width: 100%; /* 1 */
+ }

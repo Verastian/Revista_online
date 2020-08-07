@@ -1,0 +1,30 @@
+.main__site {
+    margin: 0 auto;
+}
+.news {
+    float: left;
+    /* width: 700px; */
+}
+.news__items {
+    display: inline-block;
+    cursor: pointer;
+    /*  width: 210px; */
+    /*  margin: 5px; */
+}
+/* .new__head{
+
+} */
+.news__body img {
+    /* width: 100%; */
+    height: 60vh; 
+    object-fit: cover;
+}
+@include respond-to("bp-md"){
+    .news__body img{
+        height: 100%;
+    }  
+}
+
+.news__body p {
+    padding: 5px 10px;
+}

@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+/* .header__site{
+
+} */
+.navbar__site {
+    /* width: 960px; */
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+}
+.navbar__nav {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between; 
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+@include respond-to("bp-sm") {
+    .navbar__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        & li {
+            padding: 0 .5rem;
+        }
+    }
+}
+@include respond-to("bp-md"){
+    .navbar__nav {
+        display:flex;
+        flex-direction: row;
+        
+    }
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.navbar__logo {
+    width: fit-content;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* display: inline-block; */   
+}
+
+.nav {
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    & li {
+        list-style: none;       
+    }
+
+    & li a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+.nav__input {
+    border-radius: 30px;
+}
+
+.nav__hidden{
+    display: none;
+}
+@include respond-to("bp-md"){
+    .nav__hidden{
+       display: block;
+    }
+}
